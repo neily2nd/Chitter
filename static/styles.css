@@ -1,0 +1,68 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4; /* Light gray background */
+}
+
+.container {
+  align-content: center;
+  justify-content: center;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff; /* White background for content */
+  border-radius: 5px; /* Rounded corners for the container */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth effect */
+}
+.container-centred {
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #333;
+  background-color: #007bff; /* Blue background for h1 */
+  padding: 10px 20px; /* Add some padding to make it stand out */
+  color: #fff; /* White text color */
+  border-radius: 5px; /* Rounded corners */
+}
+
+h2 {
+  color: #666;
+}
+
+p {
+  color: #999;
+}
+
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}

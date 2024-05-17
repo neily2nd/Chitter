@@ -1,43 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Home</title>
+      <link
+        rel="stylesheet"
+        href="{{ url_for('static', filename='styles.css') }}"
+      />
+    </head>
   </head>
   <body>
-    <h1>Welcome to Chitter!</h1>
-    <p>This is the home page.</p>
+    <div class="container-centred">
+      <h1>Welcome to Chitter!</h1>
+      <p>This is the home page.</p>
 
-    <!-- Form to post new peep -->
-    <h2>Post a Peep:</h2>
-    <form action="{{ url_for('post_peep') }}" method="post">
-      <label for="peep_content">Peep Content:</label><br />
-      <textarea
-        id="peep_content"
-        name="peep_content"
-        rows="4"
-        cols="50"
-        required
-      ></textarea
-      ><br />
-      <button type="submit">Post Peep</button>
-    </form>
+      <!-- Form to post new peep -->
+      <h2>Post a Peep:</h2>
+      <form action="{{ url_for('post_peep') }}" method="post">
+        <label for="peep_content">Peep Content:</label><br />
+        <textarea
+          id="peep_content"
+          name="peep_content"
+          rows="4"
+          cols="50"
+          required
+        ></textarea
+        ><br />
+        <button type="submit">Post Peep</button>
+      </form>
 
-    <!-- Logout form -->
-    <form action="{{ url_for('logout') }}" method="post">
-      <button type="submit">Logout</button>
-    </form>
+      <!-- Logout form -->
+      <form action="{{ url_for('logout') }}" method="post">
+        <button type="submit">Logout</button>
+      </form>
 
-    <!-- Latest Peeps section -->
-    <h2>Latest Peeps:</h2>
-    <ul>
-      {% for peep in peeps %}
-      <li>
-        {{ peep.content }} - {{ peep.timestamp.strftime('%Y-%m-%d %H:%M:%S') }}
-        - {{ peep.user.name }} - {{ peep.user.username}}
-      </li>
-      {% endfor %}
-    </ul>
+      <!-- Latest Peeps section -->
+      <h2>Latest Peeps:</h2>
+      <ul>
+        {% for peep in peeps %}
+        <li>
+          {{ peep.content }} - {{ peep.timestamp.strftime('%Y-%m-%d %H:%M:%S')
+          }} - {{ peep.user.name }} - {{ peep.user.username}}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
   </body>
 </html>
